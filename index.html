@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="js/jquery-3.4.1.js">
-  <link rel="stylesheet" href="js/script.js">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/script.js"></script>
   <title>Uncle Pizza</title>
 </head>
 <body>
@@ -28,17 +28,180 @@
       </nav>
       </div>
     </div>
+    <div><hr></div>
+
+    <!--Menu-->
+    <div class="row menu_page">
+        <div class="col-md-6 pizza_menu">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Menu</h3>
+            </div>
+            <div class="col-md-12">
+              <h5 class="menuguide">Vegetarian</h5>
+            </div>
+            <div class="col-md-4">
+                <div class="product">
+                  <img src="img/chicken.jpg" alt="">
+                </div>
+            </div>
+
+        <div class="col-md-4">
+          <div class="product">
+            <img src="img/chicken.jpg" alt="">
+          </div>
+      </div>
+      
+      <div class="col-md-12">
+        <h5 class="menuguide">Vegetarian</h5>
+      </div>
+      <hr>
+      <div class="col-md-3">
+          <div class="product">
+            <img src="img/chicken.jpg" alt="">
+          </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="product">
+          <img src="img/chicken.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product">
+        <img src="img/chicken.jpg" alt="">
+      </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="product">
+      <img src="img/chicken.jpg" alt="">
+    </div>
+    <div>
+      <button>order</button>
+    </div>
+    </div>
+    <div class="col-md-12">
+      <h5 class="menuguide">Vegetarian</h5>
+    </div>
+    <div class="col-md-3">
+        <div class="product">
+          <img src="img/Blogenium.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product">
+        <img src="img/london.jpeg" alt="">
+      </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="product">
+      <img src="img/chicken.jpg" alt="">
+    </div>
+</div>
+
+<div class="col-md-3">
+  <div class="product">
+    <img src="img/italia.jpg" alt="">
+  </div>
+  </div>
+  <div>
+    <hr>
+  </div>
+  
+          </div>
+        </div>
+
+        <div>
+            <div class="col-md-2 myorder">
+              <form action="">
+                <h3><strong>Order pizza</strong></h3>
+                <hr>
+                <h4><strong>Choose Size</strong></h4>
+                <label for="">Small</label>
+                <input type="radio" class="size" name="size" id="small">
+                <label for="">Medium</label>
+                <input type="radio" class="size" name="size" id="medium">
+                <label for="">Large</label>
+                <input type="radio" class="size" name="size" id="large">
+                <hr>
+                <h4><strong>Choose Flavor</strong></h4>
+                <select name="flavor" id="flavor">
+                  <option value="">Chicken Hawaiian</option>
+                  <option value="">Cheese Burger</option>
+                  <option value="">Meat Deluxe.</option>
+                  <option value="">Chicken Macon BBQ</option>
+                  <option value="">Beef Pepperoni</option>
+                  <option value="">Veg Feast</option>
+                </select>
+                <hr>
+                <h4><strong>Choose Crust</strong></h4>
+                <label for="crispy">Crispy</label>
+                <input type="radio" name="crust" id="crust"> 
+                <label for="Stuffed">Stuffed</label>
+                <input type="radio" name="crust" id="crust">
+                <label for="Glutten-free" >Glutten-free</label>
+                <input type="radio" name="crust" id="crust">
+                <hr>
+                <h4>Whats for Toppings</h4>
+                <select name="toppings" id="">
+                  <datalist>
+                    <option value="" id="toppings">Pepperoni @150</option>
+                    <option value="">Mushrooms @85</option>
+                    <option value="">Sausage  @60</option>
+                    <option value="">Bacon  @50</option>
+                    <option value="">Extra cheese. @110</option>
+                    <option value="">Black olives. @120</option>
+                    <option value="">Onions. @40</option>
+                    <option value="">Green peppers @35</option>
+                  </datalist>
+                </select>
+                <br>
+                <hr>
+                <h5>Quantity</h5>
+                  <div class="input-group">
+                    <input type="button" value="-" class="button-minus" data-field="quantity">
+                    <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                    <input type="button" value="+" class="button-plus" data-field="quantity">
+                  </div>
+                
+                
+                <hr>  
+                <div>
+                  <button class="btn btn-primary" id="checkout">Add to cart</button>
+                </div>
+                   
+              </form>
+            </div>
+          </div>
+          
+        </div>
+
+        <!--Order summary-->
+        <div class="col-md-2 ordersummary">
+          <h3>Order Summary</h3>
+          <form action="submit">
+            <label for="">Flavor:</label><br>
+            <label for="">Size:</label><br>
+            <label for="">Crust:</label><br>
+            <label for="">Toppings:</label><br>
+            <label for="">Quantity:</label><br>
+            <label for=""><b>Total price:</b></label><br>
+          </form>
+          <button class="btn btn-primary">Delivery</button>
+          <button class="btn btn-secondary">PICK UP</button>
+        </div>
+
+         <!--Order pizza-->
+
+        </div>
 
 
-
-
-
-
-
-
-
-
-
+        
+        
   </div>
 </body>
 </html>
