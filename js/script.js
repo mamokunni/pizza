@@ -40,9 +40,9 @@ $('.input-group').on('click', '.button-minus', function(e) {
 
 
 
-//
+
 $(document).ready(function(){
-//get inputs 
+
 
 
 function (){
@@ -177,7 +177,7 @@ $("#checkout").click(function () {
   var crustAmount = parseInt($("#crust").val());
   var toppingsAmount = parseInt($("#toppings").val());
   var sumTotal = sizeAmount + crustAmount + toppingsAmount;
-  var quantity = parseInt($("#number").val());
+  var quantity = parseInt($("#quantity").val());
   var totalPrice = sumTotal * quantity;
   alert("This is your total cost thank you for ordering " + totalPrice);
 });
