@@ -161,50 +161,50 @@
 
         <div>
             <div class="col-md-2 myorder">
-              <form action="submit" id="pizzaorder1">
+              <form id="pizzaorder1">
                 <h3><strong>Order pizza</strong></h3>
                 <hr>
                 <h4><strong>Choose Size</strong></h4>
                 <div id="size">
                 <label for="">Small</label>
-                <input type="radio" class="size" name="small" id="small">
+                <input type="radio" class="size" name="size" id="small" value="small">
                 <label for="">Medium</label>
-                <input type="radio" class="size" name="medium" id="medium">
+                <input type="radio" class="size" name="size" id="medium" value="medium">
                 <label for="">Large</label>
-                <input type="radio" class="size" name="large" id="large">
+                <input type="radio" class="size" name="size" id="large" value="large">
               </div>
                 <hr>
                 <h4><strong>Choose Flavor</strong></h4>
                 <select name="flavor" id="flavor">
-                  <option value="">Chicken Hawaiian</option>
-                  <option value="">Cheese Burger</option>
-                  <option value="">Meat Deluxe.</option>
-                  <option value="">Chicken Macon BBQ</option>
-                  <option value="">Beef Pepperoni</option>
-                  <option value="">Veg Feast</option>
+                  <option value="Chicken Hawaiian">Chicken Hawaiian</option>
+                  <option value="Cheese Burger">Cheese Burger</option>
+                  <option value="Meat Deluxe">Meat Deluxe</option>
+                  <option value="Chicken Macon BBQ">Chicken Macon BBQ</option>
+                  <option value="Beef Pepperoni">Beef Pepperoni</option>
+                  <option value="Veg Feast">Veg Feast</option>
                 </select>
                 <hr>
                 <h4><strong>Choose Crust</strong></h4>
 
                 
                 <label for="crispy" id="crust">Crispy</label>
-                <input type="radio" name="crust" id="crust"> 
+                <input type="radio" name="crust" id="crust" value="Crispy"> 
                 <label for="Stuffed" id="crust">Stuffed</label>
-                <input type="radio" name="crust" id="crust">
+                <input type="radio" name="crust" id="crust" value="Stuffed">
                 <label for="Glutten-free" id="crust">Glutten-free</label>
-                <input type="radio" name="crust" id="crust">
+                <input type="radio" name="crust" id="crust" value="Glutten-free">
                 <hr class ="line">
                 <h4>Whats for Toppings</h4>
                 <select name="toppings" id="toppings">
                   <datalist>
-                    <option value="">Pepperoni @150</option>
-                    <option value="" id="toppings">Mushrooms @85</option>
-                    <option value="" id="toppings">Sausage  @60</option>
-                    <option value="" id="toppings">Bacon  @50</option>
-                    <option value="" id="toppings">Extra cheese. @110</option>
-                    <option value="" id="toppings">Black olives. @120</option>
-                    <option value="" id="toppings">Onions. @40</option>
-                    <option value="" id="toppings">Green peppers @35</option>
+                    <option value="Pepperoni">Pepperoni @150</option>
+                    <option value="Mushrooms" id="toppings">Mushrooms @85</option>
+                    <option value="Sausage" id="toppings">Sausage  @60</option>
+                    <option value="Bacon" id="toppings">Bacon  @50</option>
+                    <option value="Extra cheese" id="toppings">Extra cheese @110</option>
+                    <option value="Black olives" id="toppings">Black olives @120</option>
+                    <option value="Onions" id="toppings">Onions @40</option>
+                    <option value="Green peppers" id="toppings">Green peppers @35</option>
                   </datalist>
                 </select>
                 <br>
@@ -212,7 +212,7 @@
                 <h5>Quantity</h5>
                   <div class="input-group" id="quantity">
                     <input type="button" value="-" class="button-minus" data-field="quantity">
-                    <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                    <input type="number" step="1" max="" value="1" name="quantity" id="quantity-field" class="quantity-field">
                     <input type="button" value="+" class="button-plus" data-field="quantity">
                   </div>
                 
