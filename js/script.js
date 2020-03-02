@@ -43,7 +43,7 @@ $('.input-group').on('click', '.button-minus', function(e) {
 
 
 
-
+var sizeAmount, flavortype, crustAmount, toppingsAmount;
 
 
 var Pizzaorder = function(flavor, size, crust, topping, price){
@@ -52,11 +52,9 @@ var Pizzaorder = function(flavor, size, crust, topping, price){
   this.crust = crust;
   this.topping = topping;
   this.price = price;
-};
-
-var totalprice = function(){
-  return size() + crust() + topping()*quantity()
 }
+
+
 
 
 
@@ -64,96 +62,98 @@ var totalprice = function(){
 $('#small').click(function(){
   var checksize = $("input[name='size']:checked").val();
   if (checksize == 'small'){
-    size = parseInt(600);
+    sizeAmount = parseInt(600);
   }
 
   else if( checksize =='medium'){
-    size = parseInt(800);
+    sizeAmount = parseInt(800);
   }
 
   else if( checksize== 'large'){
-    size = parseInt(1000);
+    sizeAmount = parseInt(1000);
   }
 
   
-});
+})
+
+
 
 $('#flavor').click(function(){
   var checkflavor = $("input[name =='flavor]:checked").val();
   if (checkflavor == 'Chicken Hawaiian'){
-      flavor = 'Chicken Hawaiian'
+      flavortype = 'Chicken Hawaiian'
   }
 
   else if (checkflavor == 'Cheese Burger'){
-    flavor = 'Cheese Burger'
+    flavortype = 'Cheese Burger'
   }
   else if (checkflavor == 'Meat Deluxe'){
-    flavor = 'Meat Deluxe'
+    flavortype = 'Meat Deluxe'
   }
   else if (checkflavor == 'Chicken Macon BBQ'){
-    flavor = 'Chicken Macon BBQ'
+    flavortype = 'Chicken Macon BBQ'
   }
   else if (checkflavor == 'Beef Pepperoni'){
-    flavor = 'Beef Pepperoni'
+    flavortype = 'Beef Pepperoni'
   }
   else if (checkflavor == 'Veg Feast'){
-    flavor = 'Veg Feast'
+    flavortype = 'Veg Feast'
   }
 });
 
 $('#crust').click(function(){
   var checkcrust = $("input[name='crust']:checked").val();
   if (checkcrust == 'Crispy'){
-    crust = parseInt(60);
+    crustAmount = parseInt(60);
   }
 
   else if( checkcrust =='Stuffed'){
-    crust = parseInt(80);
+    crustAmount = parseInt(80);
   }
 
   else if( checkcrust =='glutten-free'){
-    crust = parseInt(120);
+    crustAmount = parseInt(120);
   }
 
   
-});
+})
 
 
 $('#toppings').click(function(){
   var checktopping = $("input[name='toppings']:checked").val();
   if (checktopping == 'Pepperoni'){
-    toppings = parseInt(160);
+    toppingsAmount = parseInt(160);
   }
 
   else if( checktopping =='mushroom'){
-    toppings = parseInt(180);
+    toppingsAmount = parseInt(180);
   }
 
   else if( checktopping =='sausage'){
-    toppings = parseInt(85);
+    toppingsAmount = parseInt(85);
   }
 
   else if( checktopping =='bacon'){
-    toppings = parseInt(35);
+    toppingsAmount = parseInt(35);
   }
   else if( checktopping =='Extra cheese'){
-    toppings = parseInt(40);
+    toppingsAmount = parseInt(40);
   }
 
   else if( checktopping =='Onions'){
-    toppings = parseInt(55);
+    toppingsAmount = parseInt(55);
   }
 
   else if( checktopping =='Black olives'){
-    toppings = parseInt(90);
+    toppingsAmount = parseInt(90);
   }
 
   else if( checktopping =='Green peppers'){
-    toppings = parseInt(75);
+    toppingsAmount = parseInt(75);
   }
 
 
-});
+})
 
 
 $('#quantity').click(function(){
@@ -163,14 +163,14 @@ $('#quantity').click(function(){
 
 $("#checkout").click(function () {
   var sizeAmount = $("select#size option:selected").val();
-  var flavorType =  $("select#flavor option:selected").val();
-  var crustAmount =  $("select#crust option:selected").val();
+  var flavorType =   document.getElementById("flavor").value;
+  var crustAmount = document.getElementById("crust").value;
   var toppingsAmount =  $("select#toppings option:selected").val();
   var sumTotal = sizeAmount + crustAmount + toppingsAmount;
   var quantity = $("select#quantity option:selected").val();
   var totalPrice = sumTotal * quantity;
   alert("Your Total Cost is: " + totalPrice);
-});
+})
 
 
 
