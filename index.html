@@ -161,16 +161,18 @@
 
         <div>
             <div class="col-md-2 myorder">
-              <form action="">
+              <form action="submit" id="pizzaorder1">
                 <h3><strong>Order pizza</strong></h3>
                 <hr>
                 <h4><strong>Choose Size</strong></h4>
+                <div id="size">
                 <label for="">Small</label>
-                <input type="radio" class="size" name="size" id="small">
+                <input type="radio" class="size" name="small" id="small">
                 <label for="">Medium</label>
-                <input type="radio" class="size" name="size" id="medium">
+                <input type="radio" class="size" name="medium" id="medium">
                 <label for="">Large</label>
-                <input type="radio" class="size" name="size" id="large">
+                <input type="radio" class="size" name="large" id="large">
+              </div>
                 <hr>
                 <h4><strong>Choose Flavor</strong></h4>
                 <select name="flavor" id="flavor">
@@ -183,17 +185,19 @@
                 </select>
                 <hr>
                 <h4><strong>Choose Crust</strong></h4>
+
+                
                 <label for="crispy" id="crust">Crispy</label>
                 <input type="radio" name="crust" id="crust"> 
                 <label for="Stuffed" id="crust">Stuffed</label>
                 <input type="radio" name="crust" id="crust">
                 <label for="Glutten-free" id="crust">Glutten-free</label>
                 <input type="radio" name="crust" id="crust">
-                <hr>
+                <hr class ="line">
                 <h4>Whats for Toppings</h4>
                 <select name="toppings" id="toppings">
                   <datalist>
-                    <option value="" id="toppings">Pepperoni @150</option>
+                    <option value="">Pepperoni @150</option>
                     <option value="" id="toppings">Mushrooms @85</option>
                     <option value="" id="toppings">Sausage  @60</option>
                     <option value="" id="toppings">Bacon  @50</option>
@@ -206,7 +210,7 @@
                 <br>
                 <hr>
                 <h5>Quantity</h5>
-                  <div class="input-group">
+                  <div class="input-group" id="quantity">
                     <input type="button" value="-" class="button-minus" data-field="quantity">
                     <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
                     <input type="button" value="+" class="button-plus" data-field="quantity">
@@ -215,7 +219,7 @@
                 
                 <hr>  
                 <div>
-                  <button class="btn btn-primary">Add to cart</button>
+                  <button class="btn btn-primary" id="checkout">Add to cart</button>
                 </div>
                    
               </form>
@@ -227,23 +231,33 @@
         <div class="col-md-2 ordersummary">
           <h3>Order Summary</h3>
           <form action="submit">
-            <label for="">Flavor:</label><br>
-            <label for="">Size:</label><br>
-            <label for="">Crust:</label><br>
-            <label for="">Toppings:</label><br>
-            <label for="">Quantity:</label><br>
-            <label for=""><b>Total price:</b></label><br>
+            <label for="">Flavor: <p class="showflavor"></p></label><br>
+            <label for="">Size: <p class="showsize"></p></label><br>
+            <label for="">Crust: <p class="showcrust"></p></label><br>
+            <label for="">Toppings: <p class="showToppings"></p></label><br>
+            <label for="">Quantity: <p class="showquantity"></p></label><br>
+            <label for=""><b>Total price:</b> <p class="showTotal"></p></label><br>
           </form>
           <button class="btn btn-primary" id="delivery">Delivery</button>
           <button class="btn btn-secondary" id="pick">PICK UP</button>
         </div>
 
-         <!--Order pizza-->
+         
 
         </div>
 
 
       
+        <div class="footer">
+          <div class="row">
+            <div class="col-md-12 social_icons" >
+              <h5>Bon Appetit'</h5>
+            </div>
+
+          <br><br>
+          
+
+        </div>
 
 
         
