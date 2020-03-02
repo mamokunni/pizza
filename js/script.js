@@ -46,12 +46,6 @@ $('.input-group').on('click', '.button-minus', function(e) {
 
 
 
-var pizza = {flavor, size, crust, topping, quantity};
-var flavor = ['Chicken Hawaiian','Cheese Burger', 'Meat Deluxe', 'Chicken Macon BBQ', 'Beef Pepperoni', 'Veg Feast'];
-var size =['small', 'medium', 'large'];
-var crust = ['crispy', 'stuffed', 'glutten-free'];
-var topping = ['Pepperoni', 'Mushrooms', 'Sausage', 'Bacon', 'Extra cheese', 'Black olives','Onions', 'Green peppers']
-
 var Pizzaorder = function(flavor, size, crust, topping, price){
   this.flavor = flavor;
   this.size = size;
@@ -81,9 +75,7 @@ $('#small').click(function(){
     size = parseInt(1000);
   }
 
-  else {
-    alert ("Please select size");
-  }
+  
 });
 
 $('#flavor').click(function(){
@@ -123,9 +115,7 @@ $('#crust').click(function(){
     crust = parseInt(120);
   }
 
-  else {
-    alert ("Please select crust");
-  }
+  
 });
 
 
@@ -162,23 +152,37 @@ $('#toppings').click(function(){
     toppings = parseInt(75);
   }
 
-  else {
-    alert ("Please select Toppings");
-  }
+
 });
+
+
+$('#quantity').click(function(){
+  var myquantity= document.getElementsByName('quantity').val();
+})
 
 
 $("#checkout").click(function () {
-  var sizeAmount = parseInt($("#size").val());
-  var crustAmount = parseInt($("#crust").val());
-  var toppingsAmount = parseInt($("#toppings").val());
+  var sizeAmount = $("select#size option:selected").val();
+  var flavorType =  $("select#flavor option:selected").val();
+  var crustAmount =  $("select#crust option:selected").val();
+  var toppingsAmount =  $("select#toppings option:selected").val();
   var sumTotal = sizeAmount + crustAmount + toppingsAmount;
-  var quantity = parseInt($("#quantity").val());
+  var quantity = $("select#quantity option:selected").val();
   var totalPrice = sumTotal * quantity;
-  alert("This is your total cost thank you for ordering " + totalPrice);
+  alert("Your Total Cost is: " + totalPrice);
 });
 
 
+
+
+
+$("#delivery").click(function(){
+  var name = prompt("Enter Your name:");
+  var address = prompt("Enter Your Address:");
+
+});
+
+$("#showflavor").append(totalPrice);
 
 
 
