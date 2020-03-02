@@ -33,7 +33,6 @@ $('.input-group').on('click', '.button-minus', function(e) {
   decrementValue(e);
 });
 
-});
 
 
 
@@ -41,13 +40,10 @@ $('.input-group').on('click', '.button-minus', function(e) {
 
 
 
-$(document).ready(function(){
 
 
 
-function (){
-  alert("Welcome, Kindly order your pizza")
-};
+
 
 
 var pizza = {flavor, size, crust, topping, quantity};
