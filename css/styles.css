@@ -193,3 +193,22 @@ input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: none;
 }
+
+
+
+.social_icons{
+  text-align: center;
+  color: rgb(250, 250, 250);
+  margin-top: 20px;
+  background-image: url(../img/bg1.jpeg);
+}
+
+.social_icons h5{
+  text-align: center;
+  padding: 50px;
+}
+
+.line{
+  color: aliceblue;
+  font-size: 20px;
+}
