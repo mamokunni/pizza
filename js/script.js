@@ -13,54 +13,54 @@ function checkout(flavor,size,crust,topping,number){
 
   switch (size){
     case ("small"):
-      total=total+600;
+      total=(total+600)*number;
       break;
     case ("medium"):
-      total=total+800
+      total=(total+800)*number;
       
       break;
     case ("large"):
-      total=total+1000
+      total=(total+1000)*number;
       break;
   }
   switch (crust){
     case ("Crispy"):
-      total=total+60;
+      total=(total+60)*number;
       break;
     case ("Stuffed"):
-      total=total+80
+      total=(total+80)*number;
       
       break;
     case ("Glutten-free"):
-      total=total+120;
+      total=(total+120)*number;
       break;
   }
   switch (topping){
     case ("Pepperoni"):
-      total=total+160;
+      total=(total+160)*number;
       break;
     case ("Mushrooms"):
-      total=total+180
+      total=(total+180)*number;
       
       break;
     case ("Sausage"):
-      total=total+85;
+      total=(total+85)*number;
       break;
     case ("Bacon"):
-      total=total+35;
+      total=(total+35)*number;
       break;
     case ("Extra cheese"):
-      total=total+40;
+      total=(total+40)*number;
       
       break;
     case ("Onions"):
-      total=total+55;
+      total=(total+55)*number;
       break;
       case ("Black olives"):
-    total=total+90;
+    total=(total+90)*number;
     break;
     case ("Green peppers"):
-      total=total+75;
+      total=(total+75)*number;
       
       break;
 
@@ -136,5 +136,20 @@ $(document).ready(function(){
      $("form#pizzaorder1").trigger("reset");
 
   });
+
+$("#delivery").click(function(event, deliver){
+ event.preventDefault();
+ var deliver = $(prompt("Enter Your Name:")).val();
+ var address = $(prompt("Enter Your Address:")).val();
+
+ confirm("Your Order will be ready. Order is " + newPizza);
+});
+
+$("#pick").click(function(event, deliver){
+  event.preventDefault();
+  alert("Pick up in 15 mins. Cheers!")
+ });
+
+
 })
 
